@@ -309,7 +309,7 @@ public class Recognizer{
             }
         }
 
-        //this error message should be more expressive in order to convey that neither a term nor a {expression} structure was present,
+        //this error message should be more expressive in order to convey that neither a term, nor a {expression} structure was present,
         //but this could not be properly accomplished due to the bounds of the expectations of the testing software. this current implementation
         //satisfies those expectations, though.  
         else{
@@ -326,7 +326,7 @@ public class Recognizer{
             consumeToken();
         }
         else{
-            //another situation where the error message isn't as expressive as it should be but could not be rectified.
+            //another situation where the error message isn't as expressive as it should be, but could not be rectified.
             writer.println("Error: In grammar rule term, expected token #" + (currentTokenIndex + 1) + " to be IDENTIFIER or NUMBER but was " + currentToken);
             writer.flush();
             System.exit(0);
